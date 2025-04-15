@@ -1,0 +1,28 @@
+id,title,score,num_comments,author,created_utc,url,over_18,edited,spoiler,stickied
+1jyrrh6,Data Quality Struggles!,437,8,growth_man,2025-04-14 05:52:12,https://i.redd.it/w8r7q3zyoque1.png,False,False,False,False
+1jz0yr9,"[video] What is Iceberg, and why is everyone talking about it?",75,5,rmoff,2025-04-14 14:59:30,https://www.youtube.com/watch?v=TsmhRZElPvM,False,False,False,False
+1jysxtk,Why Data Warehouses Were Created?,37,14,LinasData,2025-04-14 07:15:27,https://www.reddit.com/r/dataengineering/comments/1jysxtk/why_data_warehouses_were_created/,False,False,False,False
+1jyu3r8,Overclocking dbt: Discord's Custom Solution in Processing Petabytes of Data,36,8,rmoff,2025-04-14 08:43:47,https://discord.com/blog/overclocking-dbt-discords-custom-solution-in-processing-petabytes-of-data,False,False,False,False
+1jyqtrc,Roles when career shifting out of data engineering?,15,21,Specific_Onion2659,2025-04-14 04:50:00,https://www.reddit.com/r/dataengineering/comments/1jyqtrc/roles_when_career_shifting_out_of_data_engineering/,False,False,False,False
+1jzb3at,What database did they use?,15,2,Fast_Hovercraft_7380,2025-04-14 21:51:54,https://www.reddit.com/r/dataengineering/comments/1jzb3at/what_database_did_they_use/,False,False,False,False
+1jyve41,Event Sourcing as a creative tool for developers,13,11,No-Exam2934,2025-04-14 10:15:58,https://www.reddit.com/r/dataengineering/comments/1jyve41/event_sourcing_as_a_creative_tool_for_developers/,False,False,False,False
+1jyxdlb,ETL for Ingesting S3 files and converting to Iceberg,11,7,morpheas788,2025-04-14 12:15:20,https://www.reddit.com/r/dataengineering/comments/1jyxdlb/etl_for_ingesting_s3_files_and_converting_to/,False,False,False,False
+1jytkai,Need Advice on solution - Mapping Inconsistent Country Names to Standardized Values,8,9,RC-05,2025-04-14 08:02:29,https://www.reddit.com/r/dataengineering/comments/1jytkai/need_advice_on_solution_mapping_inconsistent/,False,False,False,False
+1jz0yme,Has anyone used Cube.js for operational (non-BI) use cases?,6,0,uri3001,2025-04-14 14:59:21,https://www.reddit.com/r/dataengineering/comments/1jz0yme/has_anyone_used_cubejs_for_operational_nonbi_use/,False,False,False,False
+1jz0zet,How do I document existing Pipelines?,4,7,UnluckyToday4275,2025-04-14 15:00:15,https://www.reddit.com/r/dataengineering/comments/1jz0zet/how_do_i_document_existing_pipelines/,False,False,False,False
+1jytgrh,Advice on data warehouse design for ERP Integration with Power BI,4,2,Able-Tomatillo-5122,2025-04-14 07:55:22,https://www.reddit.com/r/dataengineering/comments/1jytgrh/advice_on_data_warehouse_design_for_erp/,False,False,False,False
+1jz6bu9,Databricks Pain Points?,3,3,caleb-amperity,2025-04-14 18:37:22,https://www.reddit.com/r/dataengineering/comments/1jz6bu9/databricks_pain_points/,False,False,False,False
+1jz9af1,How do managed services work with vendors like ClickHouse?,2,13,wcneill,2025-04-14 20:34:56,https://www.reddit.com/r/dataengineering/comments/1jz9af1/how_do_managed_services_work_with_vendors_like/,False,False,False,False
+1jz5r9v,"If you've been curious about what a feature store is and if you actually need one, this post might help",2,0,fithrowaway379,2025-04-14 18:14:31,https://www.daimlengineering.com/p/feature-stores-demistified,False,False,False,False
+1jz0clz,Databricks geographic coding on the cheap?,2,1,stonetelescope,2025-04-14 14:33:42,https://www.reddit.com/r/dataengineering/comments/1jz0clz/databricks_geographic_coding_on_the_cheap/,False,False,False,False
+1jyu16h,dbt sqlmesh migration,2,3,do-a-cte-roll,2025-04-14 08:38:03,https://www.reddit.com/r/dataengineering/comments/1jyu16h/dbt_sqlmesh_migration/,False,False,False,False
+1jyrzz3,Help with possible skill expansion or clarification on current role,2,1,RevolutionaryMonk190,2025-04-14 06:08:14,https://www.reddit.com/r/dataengineering/comments/1jyrzz3/help_with_possible_skill_expansion_or/,False,False,False,False
+1jzalqz,MySQL CDC for ClickHouse,1,0,saipeerdb,2025-04-14 21:30:07,https://clickhouse.com/blog/mysql-cdc-connector-clickpipes-private-preview,False,False,False,False
+1jz3m2a,Files to be processed in sequence on S3 bucket.,1,3,Awsmason,2025-04-14 16:47:37,https://www.reddit.com/r/dataengineering/comments/1jz3m2a/files_to_be_processed_in_sequence_on_s3_bucket/,False,False,False,False
+1jz4fsw,NoSQL Database for Ticketing System,0,4,StrongFault814,2025-04-14 17:21:23,https://www.reddit.com/r/dataengineering/comments/1jz4fsw/nosql_database_for_ticketing_system/,False,False,False,False
+1jz3810,Any success story from Microsoft Feature Stores?,0,1,Kindly-Principle3706,2025-04-14 16:31:25,https://www.reddit.com/r/dataengineering/comments/1jz3810/any_success_story_from_microsoft_feature_stores/,False,False,False,False
+1jz026m,Recommendations for a new grad,0,6,CCrite,2025-04-14 14:21:26,https://www.reddit.com/r/dataengineering/comments/1jz026m/recommendations_for_a_new_grad/,False,False,False,False
+1jyx7at,How do you improve Data Quality?,0,17,Foreigner_Zulmi,2025-04-14 12:05:56,https://www.reddit.com/r/dataengineering/comments/1jyx7at/how_do_you_improve_data_quality/,False,False,False,False
+1jyvyxh,Fact Tables: The Backbone of Your Data Warehouse,0,0,adityasharmah,2025-04-14 10:54:13,https://medium.com/@adityasharmah27/fact-tables-the-backbone-of-your-data-warehouse-9a3014cc20c3,False,False,False,False
+1jyv7r9,Khatabook (YC S18) replaced Mixpanel and cut its analytics cost by 90%,0,1,Still-Butterfly-3669,2025-04-14 10:03:50,https://i.redd.it/v8x1gtjvxrue1.jpeg,False,False,False,False
+1jyv9wq,One of the best Fivetran alternative,0,7,Temporary_You5983,2025-04-14 10:07:58,https://www.reddit.com/r/dataengineering/comments/1jyv9wq/one_of_the_best_fivetran_alternative/,False,False,False,False

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e577262b-6557-4b65-92d0-3c3d5d449ba9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/RedditDataEngineering.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e577262b-6557-4b65-92d0-3c3d5d449ba9" name="Changes" comment="Initial commit - Reddit Data Pipeline with Airflow" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Harishankarreddy01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Harishankarreddy01/reddit-data-engineering.git",
+    "accountId": "8a2d87d4-9edc-438c-8921-2564576073a0"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/dags/reddit_dag.py" root0="SKIP_INSPECTION" />
   </component>
@@ -63,10 +69,23 @@
       <option name="presentableId" value="Default" />
       <updated>1744060221374</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit - Reddit Data Pipeline with Airflow">
+      <option name="closed" value="true" />
+      <created>1744682286195</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744682286195</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit - Reddit Data Pipeline with Airflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit - Reddit Data Pipeline with Airflow" />
   </component>
 </project>
