@@ -84,7 +84,7 @@ RedditDataEngineering/
 
 📸 *Running container in Docker Desktop*
 
-![Docker Container](assets/docker_container.png)
+![Docker Container](assets/RunningContainer.png)
 
 ---
 
