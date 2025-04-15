@@ -1,4 +1,4 @@
-# Reddit Data Engineering Pipeline (Airflow + AWS)
+# Data Pipeline with Reddit, Airflow, Celery, Postgres, S3, AWS Glue, Athena, and Redshift
 
 This project is an end-to-end data pipeline that extracts top posts from Reddit, processes and stores them in Amazon S3, transforms them with AWS Glue, and makes the data queryable using Athena and Redshift. The orchestration is handled using Apache Airflow and Docker.
 
