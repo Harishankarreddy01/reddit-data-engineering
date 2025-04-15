@@ -1,4 +1,4 @@
-# 🤪 Reddit Data Engineering Pipeline (Airflow + AWS)
+# Reddit Data Engineering Pipeline (Airflow + AWS)
 
 This project is an end-to-end data pipeline that extracts top posts from Reddit, processes and stores them in Amazon S3, transforms them with AWS Glue, and makes the data queryable using Athena and Redshift. The orchestration is handled using Apache Airflow and Docker.
 
@@ -6,16 +6,16 @@ This project is an end-to-end data pipeline that extracts top posts from Reddit,
 
 ## 🚀 What This Project Does
 
-- 🔍 Extracts Reddit data using Reddit API and PRAW (Python Reddit API Wrapper)
-- ⚙️ Orchestrates ETL jobs using Apache Airflow + Celery
-- 💃 Stores data in Amazon S3 (raw & transformed folders)
-- 🢼 Cleans/transforms data using AWS Glue
-- 🔎 Queries data via Amazon Athena
-- 🧠 Loads into Amazon Redshift for advanced analytics and charting
+- Extracts Reddit data using Reddit API and PRAW (Python Reddit API Wrapper)
+- Orchestrates ETL jobs using Apache Airflow + Celery
+- Stores data in Amazon S3 (raw & transformed folders)
+- Cleans/transforms data using AWS Glue
+- Queries data via Amazon Athena
+- Loads into Amazon Redshift for advanced analytics and charting
 
 ---
 
-## 💠 Tools & Technologies Used
+## Tools & Technologies Used
 
 | Tool            | Purpose                        |
 |-----------------|--------------------------------|
@@ -30,7 +30,7 @@ This project is an end-to-end data pipeline that extracts top posts from Reddit,
 
 ---
 
-## 📸 Architecture
+## Architecture
 
 ![Architecture](assets/RedditDataEngineering.png)
 
@@ -97,15 +97,15 @@ The DAG `etl_reddit_pipeline` runs the following steps:
 
 📸 *Airflow DAG view*
 
-![Airflow DAG](assets/airflow_dag.png)
+![Airflow DAG](assets/AirflowDAGUI.png)
 
 📸 *Logs of successful DAG run*
 
-![Airflow Logs](assets/airflow_logs.png)
+![Airflow Logs](assets/AirflowLogOnSuccessfulExecution.png)
 
 ---
 
-## 👢 Data Landing in S3
+## Data Landing in S3
 
 After a successful run, your S3 bucket will contain:
 
@@ -115,11 +115,11 @@ After a successful run, your S3 bucket will contain:
 
 📸 *S3 bucket structure*
 
-![S3 Bucket](assets/s3_bucket_structure.png)
+![S3 Bucket](assets/s3BucketRawFolder.png)
 
 ---
 
-## 🧐 Data Transformation with AWS Glue
+## Data Transformation with AWS Glue
 
 We configured a Glue job to clean and reformat data using PySpark.
 
@@ -127,25 +127,27 @@ We configured a Glue job to clean and reformat data using PySpark.
 - Applies transformations
 - Saves the output to `transformed/`
 
+![S3 Bucket](assets/S3bucketTransformedFolder.png)
+
 ---
 
-## 🔍 Querying in Athena
+## Querying in Athena
 
 Use AWS Athena to query the transformed data directly from S3 using SQL.
 
 📸 *Athena table preview*
 
-![Athena](assets/athena_table.png)
+![Athena](assets/AthenaTableOutputPreview.png)
 
 ---
 
-## 🧠 Loading into Redshift + Visualization
+## Loading into Redshift + Visualization
 
 The final transformed data is made available in **Redshift** via Glue Data Catalog. You can use SQL to query and visualize data (e.g., top authors by comment count).
 
 📸 *Redshift charting*
 
-![Redshift](assets/redshift_chart.png)
+![Redshift](assets/RedshiftPreview.png)
 
 ---
 
@@ -160,10 +162,10 @@ This project mimics a real-world, production-grade batch data pipeline using ind
 
 ---
 
-## 🧐 Author
+## Author
 
 **Hari Shankar Reddy Mandapati**  
-Data Engineering Enthusiast | MS CS @ UNCC  
+Data Scientist | MS CS @ UNCC  
 GitHub: [Harishankarreddy01](https://github.com/Harishankarreddy01)  
-LinkedIn: *[Add your LinkedIn link here]*
+LinkedIn: https://www.linkedin.com/in/sri-hari-shankar-reddy-mandapati02/
 
