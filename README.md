@@ -1,65 +1,169 @@
-# Data Pipeline with Reddit, Airflow, Celery, Postgres, S3, AWS Glue, Athena, and Redshift
+# 🤪 Reddit Data Engineering Pipeline (Airflow + AWS)
 
-This project provides a comprehensive data pipeline solution to extract, transform, and load (ETL) Reddit data into a Redshift data warehouse. The pipeline leverages a combination of tools and services including Apache Airflow, Celery, PostgreSQL, Amazon S3, AWS Glue, Amazon Athena, and Amazon Redshift.
+This project is an end-to-end data pipeline that extracts top posts from Reddit, processes and stores them in Amazon S3, transforms them with AWS Glue, and makes the data queryable using Athena and Redshift. The orchestration is handled using Apache Airflow and Docker.
 
-## Table of Contents
+---
 
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
-- [System Setup](#system-setup)
+## 🚀 What This Project Does
 
-## Overview
+- 🔍 Extracts Reddit data using Reddit API and PRAW (Python Reddit API Wrapper)
+- ⚙️ Orchestrates ETL jobs using Apache Airflow + Celery
+- 💃 Stores data in Amazon S3 (raw & transformed folders)
+- 🢼 Cleans/transforms data using AWS Glue
+- 🔎 Queries data via Amazon Athena
+- 🧠 Loads into Amazon Redshift for advanced analytics and charting
 
-The pipeline is designed to:
+---
 
-1. Extract data from Reddit using its API.
-2. Store the raw data into an S3 bucket from Airflow.
-3. Transform the data using AWS Glue and Amazon Athena.
-4. Load the transformed data into Amazon Redshift for analytics and querying.
+## 💠 Tools & Technologies Used
 
-## Architecture
-![RedditDataEngineering.png](assets%2FRedditDataEngineering.png)
-1. **Reddit API**: Source of the data.
-2. **Apache Airflow & Celery**: Orchestrates the ETL process and manages task distribution.
-3. **PostgreSQL**: Temporary storage and metadata management.
-4. **Amazon S3**: Raw data storage.
-5. **AWS Glue**: Data cataloging and ETL jobs.
-6. **Amazon Athena**: SQL-based data transformation.
-7. **Amazon Redshift**: Data warehousing and analytics.
+| Tool            | Purpose                        |
+|-----------------|--------------------------------|
+| Airflow + Celery| DAG orchestration and task queues |
+| PostgreSQL      | Airflow metadata DB            |
+| Docker          | Local containerized setup      |
+| Reddit API + PRAW | Data extraction               |
+| S3              | Cloud data lake                |
+| AWS Glue        | ETL & cataloging               |
+| Athena          | Serverless SQL queries         |
+| Redshift        | Data warehousing and BI        |
 
-## Prerequisites
-- AWS Account with appropriate permissions for S3, Glue, Athena, and Redshift.
-- Reddit API credentials.
-- Docker Installation
-- Python 3.9 or higher
+---
 
-## System Setup
-1. Clone the repository.
+## 📸 Architecture
+
+![Architecture](assets/RedditDataEngineering.png)
+
+---
+
+## 🧩 Project Structure
+
+```
+RedditDataEngineering/
+│
+├── dags/                    → Airflow DAG definitions
+│   └── reddit_dag.py
+│
+├── pipelines/              → Custom logic for Reddit ETL
+│   └── reddit_pipeline.py
+│
+├── etls/
+│   ├── reddit_etl.py       → Reddit API extract logic
+│   └── aws_etl.py          → AWS S3 handling
+│
+├── config/
+│   └── config.conf         → Reddit & AWS credentials
+│
+├── utils/
+│   └── constants.py        → Paths and keys
+│
+├── docker-compose.yml      → All services setup
+└── requirements.txt
+```
+
+---
+
+## ⚙️ Getting Started
+
+1. **Clone the repository**
    ```bash
-    git clone https://github.com/Harishankarreddy01/reddit-data-engineering.git
+   git clone https://github.com/Harishankarreddy01/reddit-data-engineering.git
+   cd reddit-data-engineering
    ```
-2. Create a virtual environment.
+
+2. **Configure credentials**
    ```bash
-    python3 -m venv venv
+   cp config/config.conf.example config/config.conf
+   # Then edit the file with your Reddit and AWS keys
    ```
-3. Activate the virtual environment.
+
+3. **Start Docker containers**
    ```bash
-    source venv/bin/activate
+   docker-compose up --build
    ```
-4. Install the dependencies.
-   ```bash
-    pip install -r requirements.txt
-   ```
-5. Rename the configuration file and the credentials to the file.
-   ```bash
-    mv config/config.conf.example config/config.conf
-   ```
-6. Starting the containers
-   ```bash
-    docker-compose up -d
-   ```
-7. Launch the Airflow web UI.
-   ```bash
-    open http://localhost:8080
-   ```
+
+📸 *Running container in Docker Desktop*
+
+![Docker Container](assets/docker_container.png)
+
+---
+
+## 🌀 Airflow DAG Setup
+
+The DAG `etl_reddit_pipeline` runs the following steps:
+
+- `reddit_extraction`: Extracts and processes top posts from Reddit
+- `s3_upload`: Uploads the CSV to S3
+
+📸 *Airflow DAG view*
+
+![Airflow DAG](assets/airflow_dag.png)
+
+📸 *Logs of successful DAG run*
+
+![Airflow Logs](assets/airflow_logs.png)
+
+---
+
+## 👢 Data Landing in S3
+
+After a successful run, your S3 bucket will contain:
+
+- `raw/`: Raw extracted CSVs
+- `transformed/`: Output from AWS Glue
+- `athena_scripts/`: Athena SQL queries (optional)
+
+📸 *S3 bucket structure*
+
+![S3 Bucket](assets/s3_bucket_structure.png)
+
+---
+
+## 🧐 Data Transformation with AWS Glue
+
+We configured a Glue job to clean and reformat data using PySpark.
+
+- Reads data from `raw/`
+- Applies transformations
+- Saves the output to `transformed/`
+
+---
+
+## 🔍 Querying in Athena
+
+Use AWS Athena to query the transformed data directly from S3 using SQL.
+
+📸 *Athena table preview*
+
+![Athena](assets/athena_table.png)
+
+---
+
+## 🧠 Loading into Redshift + Visualization
+
+The final transformed data is made available in **Redshift** via Glue Data Catalog. You can use SQL to query and visualize data (e.g., top authors by comment count).
+
+📸 *Redshift charting*
+
+![Redshift](assets/redshift_chart.png)
+
+---
+
+## ✅ Outcome
+
+This project mimics a real-world, production-grade batch data pipeline using industry-standard tools. It demonstrates:
+
+- API-based ingestion
+- Event-based orchestration
+- Scalable storage and compute
+- Cloud-based querying and warehousing
+
+---
+
+## 🧐 Author
+
+**Hari Shankar Reddy Mandapati**  
+Data Engineering Enthusiast | MS CS @ UNCC  
+GitHub: [Harishankarreddy01](https://github.com/Harishankarreddy01)  
+LinkedIn: *[Add your LinkedIn link here]*
+
